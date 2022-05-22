@@ -45,7 +45,7 @@ main{
     background-color: #96CEB4;
     text-align: center;
     font-size: 1.6rem;
-    color: #fff;
+    color: gray;
     margin-top: 3px;
     padding-top: 5px;
 
@@ -125,12 +125,12 @@ main{
 .remove{
     width: 24px;
     height: 24px;
-    border-radius: 50%;
+    border-radius: 5px;
     background-color: #ffffff88;
     text-align: center;
     font-size: 1.2rem;
     position: absolute;
-    top: -10px;
+    top: 3px;
     right: 5px;
     cursor: pointer;
 }
@@ -138,7 +138,7 @@ main{
     background-color: #fff;
 }
 .remove:active{
-    background-color: #f37575;
+    color: #f37575;
 }
 .invisible{
     display: none;

@@ -20,23 +20,26 @@ if(localStorage.getItem("taskItem")){
 
 upcomingTab.addEventListener("click", ()=>{
     if(unfinishedTask.classList.contains("invisible")){
+        upcomingTab.style.color = "white";
         unfinishedTask.classList.remove("invisible");
         unfinishedTask.classList.add("visible");
         finishedTask.classList.add("invisible");
         addButton.classList.remove("invisible");
         finishedTask.classList.remove("visible");
         nav.style.backgroundColor = "#96CEB4";
+        finishedTab.style.color="gray";
     }
 });
 finishedTab.addEventListener("click", ()=>{
     if(finishedTask.classList.contains("invisible")){
+        finishedTab.style.color="white";
         unfinishedTask.classList.remove("visible");
         unfinishedTask.classList.add("invisible");
         finishedTask.classList.remove("invisible");
         finishedTask.classList.add("visible");
         addButton.classList.add("invisible");
         nav.style.backgroundColor = "#FFAD60";
-
+        upcomingTab.style.color = "gray";
     }
 });
 
@@ -68,7 +71,9 @@ function makeTask(text, parent, oldId){
         task.classList.add("task");
         task.innerHTML = `<input type="checkbox" class="check">
                             <div class="content">${text}</div>
-                            <div class="remove">x</div>`;
+                            <div class="remove"><span class="material-symbols-outlined">
+                            delete
+                            </span></div>`;
         if(oldId != undefined){
             id = oldId;
             if(parent === 1){
